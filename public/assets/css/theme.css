@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.primaryColor {
+     background: #89bcb8;
+}
+
+
+.footer {
+    height: 300px;
+    display:block;
+}
