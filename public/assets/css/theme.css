@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');  
 
 
 html {
@@ -14,4 +14,12 @@ html {
 .footer {
     height: 300px;
     display:block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300 !important;
+}
+
+h2 {
+    font-size: 30px;
 }

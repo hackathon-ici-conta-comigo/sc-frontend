@@ -1,0 +1,145 @@
+.slick-slide {
+    min-height: 300px;
+    max-height: 300px;
+}
+
+
+.slick-slide.estudo {
+	background-image: url('./images/banner-topo.jpeg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+    color: white;
+}
+
+
+.slick-slide.estudo .header-slider-text {
+    height: 150px;
+}
+
+.slick-slide.estudo .header-slider-text  h1{
+    line-height: 150px;
+    vertical-align: middle;
+}
+
+.slick-slide.ici {
+	background-image: url('./images/banner-ici.jpg');
+	background-repeat: no-repeat;
+	background-color: white;
+    background-position: center;
+}
+
+.slick-slide.selo-engajamento {
+	background-image: url('./images/banner-selo-engajamento.png') !important;
+	background-repeat: no-repeat;
+	background-size: 60%;
+    background-position: center;
+    background-color: #463358;
+
+}
+
+
+.slick-arrow {
+    position: absolute;
+}
+
+
+.slick-arrow.slick-prev,
+.slick-arrow.slick-next
+{
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 40%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+}
+
+.slick-arrow.slick-next {
+    right:0;
+}
+
+.slick-arrow.slick-prev {
+    left:0;
+    z-index: 9999;
+}
+
+
+
+/* Dots */
+.slick-dotted.slick-slider
+{
+    bottom:0;
+    position: absolute;
+}
+
+.slick-dots
+{
+    position: absolute;
+    display: block;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    bottom: 10px;
+}
+.slick-dots li
+{
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+}
+.slick-dots li button
+{
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus
+{
+    outline: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before
+{
+    opacity: 1;
+}
+.slick-dots li button:before
+{
+    font-size: 40px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '•';
+    text-align: center;
+    opacity: .25;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before
+{
+    opacity: .75;
+    color: white;
+}
