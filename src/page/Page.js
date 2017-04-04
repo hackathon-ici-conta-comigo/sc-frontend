@@ -12,7 +12,7 @@ class Page extends React.Component {
     return (
       <div>
         <Header />
-        <Content />
+        <Content className="site-content"/>
         <Footer />
       </div>
     )
