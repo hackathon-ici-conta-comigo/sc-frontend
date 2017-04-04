@@ -16,9 +16,13 @@ const App = () => (
       <Route exact path="/" component={Site} />
       <Route path="/admin" component={Admin} />
       <Route path="/register" component={Register} />
+      <Route path="/contact" component={Contact} />
     </div>
   </Router>
 );
+
+
+const Contact = () => <h1>Contato</h1>
 
 
 const muiTheme = getMuiTheme({

@@ -3,10 +3,7 @@ import Header from './header/Header';
 import Content from './content/Content';
 import Footer from './footer/Footer';
 
-
-
 class Page extends React.Component {
-
 	constructor(){
 		super();
 	}
@@ -16,6 +13,7 @@ class Page extends React.Component {
       <div>
         <Header />
         <Content />
+        <Footer />
       </div>
     )
   }
