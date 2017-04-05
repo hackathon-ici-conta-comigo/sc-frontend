@@ -8,7 +8,7 @@ class HomePage extends React.Component {
     return (
         <Container>
                 <Row>
-                    <h1 className="text-center">Home Page!</h1>
+                    <h1 className="text-center">Home Page! (With Travis =) )</h1>
                 </Row>
             </Container>
     );
