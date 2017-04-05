@@ -1,52 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-
 import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
 
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import Page from './page/Page';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Website from './website/Website';
+
+const Admin = () => <h1>Admin</h1>;
 
 const App = () => (
-  <Router>
-    <div>
-      <Route exact path="/" component={Site} />
-      <Route path="/admin" component={Admin} />
-      <Route path="/register" component={Register} />
-      <Route path="/contact" component={Contact} />
-    </div>
-  </Router>
+    <Router>
+        <div>
+            <Switch>
+                <Route exact path="/admin" component={Admin}/>
+                <Route path="/" component={Website}/>
+            </Switch>
+        </div>
+    </Router>
 );
-
-
-const Contact = () => <h1>Contato</h1>
-
-
-const muiTheme = getMuiTheme({
-  palette: {
-    primary1Color: '#89bcb8',
-  }
-});
-
-
-
-const Site = () => (
-  <MuiThemeProvider muiTheme={muiTheme}>
-    <Page />
-  </MuiThemeProvider>
-);
-
-
-const Admin = () => (
-  <MuiThemeProvider></MuiThemeProvider>
-)
-
-const Register = () => <h1>Register</h1>
 
 ReactDOM.render(
-  <App />,
-  document.getElementById("root")
-);
+    <App/>, document.getElementById('root'));
