@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+- iojs
+- '6'
+deploy:
+  provider: heroku
+  api_key:
+    secure: GRBXySUxlGdkf1jdb91rUV0M1ZT71VaLGd5V5k4DQW3RqOf6PvD+/NiT9BlILTXG3Fm0z67M7CvFvUeDfI8M/P/5WnDKFzMTkuRiKLlpuHqwvzyzcbz1sAvAa09/Yvhg1tg7WvDwxI+MJ+kTrq8mnX32RtRQzwUpO7/NYUgdl70PAuEdLxDKEea8y9ZY1jx7LOdqlpyBBo7x5Hgz7yqP2jGUNnm/k9odPU9WW6uxSr0vUmg7v/8U0iRoPbsOuAB/Cfmb//s7yWG5KCJm48z04xo+sROJksDmji40PR89fZ46IUmrj4oGUvfYglURXyHawpB17vI7a8iWbyBKgg5Vn1bG/BDPqrdvPDO/UQdLe9HRqA5K5OYK4nsl2T3k5fkrjzNxRDXyPyQE/A2wSOi2gta8BYYsYpMv6MYqpEdM5gxaWjwDVFq8XuGxK0PhnZVm/1cUSczzXY3+ueb78/QyGawn2bUpG2cCb9E2Itv+uxFmn0pVY+m8t2OZjlVI5dPD6lECemYA4SiUWspkCETmjmN/s3bzAwIHH5lRUv37BwezkSpWXDwL+PAbju/tcLkm9KC1D4hSnyb8gkkKDV7yDe8jVfqtidC1TtWCftZajk1euXnaEJwCPwYI53qJ1nBICY7ssWqc6OjOetjSXTh6ifFbJqs2ONaOZpF/lMkdL1U=
+  app: contacomigo-ici
+  on:
+    repo: hackathon-ici-conta-comigo/sc-frontend
