@@ -8,6 +8,8 @@ cache:
 script:
   - npm test
   - npm run build
+env:
+  - CI=false
 deploy:
   provider: heroku
   api_key:
