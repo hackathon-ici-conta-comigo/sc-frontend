@@ -4,7 +4,6 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import Header from './header/Header';
 import Content from './content/Content';
-import Footer from './footer/Footer';
 
 import colors from './colors.css';
 
