@@ -6,16 +6,18 @@ import Header from './header/Header';
 import Content from './content/Content';
 import Footer from './footer/Footer';
 
-import './colors.css';
+import colors from './colors.css';
 
 export default class Website extends React.Component {
-  constructor() {
+  constructor({ match }) {
     super();
+    this.match = match;
     this.theme = getMuiTheme({
       palette: {
-        primary1Color: '#89bcb8',
+        primary1Color: colors.primaryColor,
       },
     });
+
   }
 
   render() {
@@ -23,7 +25,7 @@ export default class Website extends React.Component {
       <MuiThemeProvider muiTheme={this.theme}>
         <section>
           <Header />
-          <Content />
+          <Content match={this.match}/>
           <Footer />
         </section>
       </MuiThemeProvider>
