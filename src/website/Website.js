@@ -26,7 +26,6 @@ export default class Website extends React.Component {
         <section>
           <Header />
           <Content match={this.match}/>
-          <Footer />
         </section>
       </MuiThemeProvider>
     );
