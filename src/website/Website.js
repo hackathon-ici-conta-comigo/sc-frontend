@@ -6,7 +6,9 @@ import Header from './header/Header';
 import Content from './content/Content';
 import Footer from './footer/Footer';
 
-class Website extends React.Component {
+import './colors.css';
+
+export default class Website extends React.Component {
   constructor() {
     super();
     this.theme = getMuiTheme({
@@ -19,13 +21,12 @@ class Website extends React.Component {
   render() {
     return (
       <MuiThemeProvider muiTheme={this.theme}>
-        <div>
+        <section>
           <Header />
           <Content />
           <Footer />
-        </div>
+        </section>
       </MuiThemeProvider>
     );
   }
-}
-export default Website;
+};

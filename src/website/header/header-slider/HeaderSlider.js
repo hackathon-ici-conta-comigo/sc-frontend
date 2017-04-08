@@ -5,9 +5,9 @@ import RaisedButton from 'material-ui/RaisedButton';
 import { Link } from 'react-router-dom';
 
 import './slick.min.css';
-import './slider.css';
+import './HeaderSlider.css';
 
-class HeaderSlider extends React.Component {
+export default class HeaderSlider extends React.Component {
   constructor() {
     super();
 
@@ -39,9 +39,9 @@ class HeaderSlider extends React.Component {
 
   render() {
     return (
-      <div>
+      <section>
         <Slider {...this.settings}>
-          <div className="estudo">
+          <section className="estudo">
             <Container style={this.containerStyle} className="text-center header-slider-text">
                 <h2 style={this.headingStyle}>
                   Você já usou suas forças nessa batalha, agora conta comigo!
@@ -50,21 +50,19 @@ class HeaderSlider extends React.Component {
                   <RaisedButton label="Cadastre-se" primary={true} />
                 </Link>
             </Container>
-          </div>
+          </section>
 
-          <div className="ici">
+          <section className="ici">
             <Col md={2} />
             <Col md={8}>
               <RaisedButton style={this.iciLink}
                 label="Acessar" primary={true} href="https://www.ici-rs.org.br/" />
             </Col>
             <Col md={2} />
-          </div>
-          <div className="selo-engajamento"></div>
+          </section>
+          <section className="selo-engajamento"></section>
         </Slider>
-      </div>
+      </section>
     );
   }
-}
-
-export default HeaderSlider;
+};

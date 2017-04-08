@@ -1,8 +1,8 @@
 import React from 'react';
 import HeaderSlider from './header-slider/HeaderSlider';
-import TopNavigation from './TopNavigation';
+import TopNavigation from './top-navigation/TopNavigation';
 
-class Header extends React.Component {
+export default class Header extends React.Component {
   render() {
 
     var settings = {
@@ -14,12 +14,10 @@ class Header extends React.Component {
     };
 
     return (
-      <div>
+      <section>
         <TopNavigation />
         <HeaderSlider {...settings}/>
-      </div>
+      </section>
     );
   }
-}
-
-export default Header;
+};

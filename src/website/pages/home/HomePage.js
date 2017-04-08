@@ -3,16 +3,14 @@ import { Container, Row } from 'react-grid-system';
 
 import './Home.css';
 
-class HomePage extends React.Component {
+export default class HomePage extends React.Component {
   render() {
     return (
         <Container>
-                <Row>
-                    <h1 className="text-center">Home Page! (With Travis =) )</h1>
-                </Row>
-            </Container>
+            <Row>
+                <h1 className="text-center">Home Page! (With Travis =) )</h1>
+            </Row>
+        </Container>
     );
   }
-}
-
-export default HomePage;
+};

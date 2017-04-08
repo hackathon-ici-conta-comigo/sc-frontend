@@ -1,13 +1,12 @@
 import React from 'react';
 import './Footer.css';
 
-class Footer extends React.Component {
+export default class Footer extends React.Component {
   render() {
     return (
-        <div className="footer primaryColor">
-            </div>
+        <footer>
+          <h1>Teste</h1>
+        </footer>
     );
   }
-}
-
-export default Footer;
+};

@@ -1,16 +1,34 @@
+$slider-bg-color-1: #FFFFFF;
+$slider-bg-color-2: #463358;
+
 .slick-slide {
     min-height: 300px;
     max-height: 300px;
 }
 
-
 .slick-slide.estudo {
-	background-image: url('./images/banner-topo.jpeg');
+	background-image: url('../../../../public/assets/images/banner-topo.jpeg');
 	background-repeat: no-repeat;
 	background-size: 100%;
-    color: white;
+    color: $slider-bg-color-1;
 }
 
+.slick-slide.ici {
+	background-image: url('../../../../public/assets/images/banner-ici.jpg');
+	background-repeat: no-repeat;
+	background-color: $slider-bg-color-1;
+    background-position: center;
+}
+
+
+.slick-slide.selo-engajamento {
+	background-image: url('../../../../public/assets/images/banner-selo-engajamento.png') !important;
+	background-repeat: no-repeat;
+	background-size: 60%;
+    background-position: center;
+    background-color: $slider-bg-color-2;
+
+}
 
 .slick-slide.estudo .header-slider-text {
     height: 150px;
@@ -20,23 +38,6 @@
     line-height: 150px;
     vertical-align: middle;
 }
-
-.slick-slide.ici {
-	background-image: url('./images/banner-ici.jpg');
-	background-repeat: no-repeat;
-	background-color: white;
-    background-position: center;
-}
-
-.slick-slide.selo-engajamento {
-	background-image: url('./images/banner-selo-engajamento.png') !important;
-	background-repeat: no-repeat;
-	background-size: 60%;
-    background-position: center;
-    background-color: #463358;
-
-}
-
 
 .slick-arrow {
     position: absolute;

@@ -6,16 +6,20 @@ injectTapEventPlugin();
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Website from './website/Website';
 
+import './common/css/reset.css';
+import './common/css/bootstrap.css';
+import './common/css/index.css';
+
 const Admin = () => <h1>Admin</h1>;
 
 const App = () => (
     <Router>
-        <div>
+        <section>
             <Switch>
                 <Route exact path="/admin" component={Admin}/>
                 <Route path="/" component={Website}/>
             </Switch>
-        </div>
+        </section>
     </Router>
 );
 
