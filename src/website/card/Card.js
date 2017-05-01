@@ -1,17 +1,15 @@
 import React from 'react';
-import { Col } from 'react-grid-system';
 
 import './Card.css';
 
 export default class Card extends React.Component {
-
   render() {
     return (
-      <Col lg={this.props.col} className="text-center">
+      <div className="col s12 m4 center">
           <img src={this.props.image} alt={this.props.alt}
-              className="img-circle" width={this.props.width}/>
-          <p className="cardTextPadding">{this.props.description}</p>
-      </Col>
+              className="circle responsive-img" width={this.props.width}/>
+            <p className="cardText">{this.props.description}</p>
+      </div>
     );
   }
 }
