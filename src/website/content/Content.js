@@ -14,10 +14,8 @@ export default class Content extends React.Component {
     return (
         <Switch>
             <Route exact path={this.match.url} component={HomePage} />
-          //  <Route path="/register" component={Register} />
-            <Route render={() =>
-                <h1>Page not found</h1>
-            } />
+            <Route path="/register" component={Register} />
+            <Route render={() => <h1>Page not found</h1>} />
         </Switch>
     );
   }
