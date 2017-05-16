@@ -1,6 +1,5 @@
 import React from 'react';
 import {Input} from 'react-materialize';
-import $ from 'jquery';
 import 'materialize-css';
 
 export default class DatePicker extends React.Component {
