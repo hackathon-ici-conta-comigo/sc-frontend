@@ -1,9 +1,13 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-
 import './HeaderSlider.css';
 
 export default class HeaderSlider extends React.Component {
+
+  componentDidMount() {
+    
+  }
+  
   render() {
     return (
       <section className="carousel carousel-slider center" data-indicators="true">
