@@ -5,8 +5,8 @@ cache:
   directories:
     - node_modules
 script:
-  - CI=true npm test
-  - CI=true npm run build
+  - CI=false npm test
+  - CI=false npm run build
 deploy:
   provider: heroku
   api_key:
@@ -19,5 +19,3 @@ notifications:
     on_success: change
     on_failure: always
     on_start: false
-env:
-  - CI: false
