@@ -1,7 +1,9 @@
 import React from 'react';
 import './Register.css';
 import { Row, Col, Input, Icon, Button } from 'react-materialize';
-import DatePicker from '../../../common/datepicker/DatePicker'
+import DatePicker from '../../../common/datepicker/DatePicker';
+
+
 
 class RegisterForm extends React.Component {
 
@@ -17,6 +19,9 @@ class RegisterForm extends React.Component {
     event.preventDefault();
   }
 
+  componentDidMount() {
+    
+  }
   handleInput(event) {
     let state = {};
     state[event.target.name] = event.target.value;
@@ -40,7 +45,9 @@ class RegisterForm extends React.Component {
               </Input>
           </Row>
           <Row>
-              <DatePicker />
+              <DatePicker>
+                <Icon>today</Icon>
+              </DatePicker>
           </Row>
 
           <Row>
@@ -50,7 +57,7 @@ class RegisterForm extends React.Component {
                         <h6>Endereço</h6>
                         <br />
                     </Col>
-                    <Input s={6} name="state" type="select" label="Estado" defaultValue="0" onSelect={ event => this.handleInput(event) }>
+                    <Input s={6} name="state" type="select" label="Estado" defaultValue="0" onSelect={event => this.handleInput(event)}>
                         <option value="0">Escolha seu estado</option>
                         <option value="1">Rio Grande do Sul</option>
                         <option value="2">Santa Catarina</option>
@@ -72,7 +79,9 @@ class RegisterForm extends React.Component {
                       <p>Informe seus principais interesses, o que gosta de fazer e o que você quer aprender</p>
                       <br />
                   </Col>
-                  <Input name="email" placeholder="Digite seu email" label="Email" s={12} onChange={event => this.handleInput(event)} />
+                  <Input name="email" label="Digite seu email" s={12} onChange={event => this.handleInput(event)}>
+                    
+                  </Input>
                   <Input type="password" name="password" label="Digite sua senha" s={12} onChange={event => this.handleInput(event)} />
                   <Input type="password" name="confirmPassword" label="Confirme sua senha" s={12} onChange={event => this.handleInput(event)} />
 
