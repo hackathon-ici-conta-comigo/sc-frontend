@@ -2,10 +2,10 @@ import React from 'react';
 import './Search.css';
 import { Row, Col, Input } from 'react-materialize';
 import _ from "lodash";
-import shouldPureComponentUpdate from 'react-pure-render/function';
+//import shouldPureComponentUpdate from 'react-pure-render/function';
 import GoogleMap from 'google-map-react';
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
+//const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 class SearchForm extends React.Component {
   constructor() {
