@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import './common/css/common.css';
 import Website from './website/Website';
+import 'material-design-icons/iconfont/material-icons.css';
 
 const Admin = () => <h1>Admin</h1>;
 const App = () => (

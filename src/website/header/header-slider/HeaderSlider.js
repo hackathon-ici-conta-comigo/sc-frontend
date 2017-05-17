@@ -5,7 +5,7 @@ import './HeaderSlider.css';
 export default class HeaderSlider extends React.Component {
 
   componentDidMount() {
-    
+    window.$('.carousel.carousel-slider').carousel({fullWidth: true});
   }
   
   render() {

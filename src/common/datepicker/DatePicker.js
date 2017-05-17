@@ -1,14 +1,13 @@
 import React from 'react';
 import {Input} from 'react-materialize';
-import 'materialize-css';
 
 export default class DatePicker extends React.Component {
 
     componentDidMount() {
-       /* $('.datepicker').pickadate({
+        window.$('.datepicker').pickadate({
             selectMonths: true,
             selectYears: 15
-        });*/
+        });
     }
     render() {
         return (
