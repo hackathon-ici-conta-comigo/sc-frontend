@@ -7,10 +7,10 @@ export default class DatePicker extends React.Component {
     constructor(props) {
         super(props);
         this.renderFormat = 'dd !de mmmm !de yyyy';
-        this.state = {
-            value: this.props.defaultValue,
-            renderedValue: this.props.defaultValue
-        }
+
+        let defaultValue = this.props.defaultValue || '';
+        this.state = { value: defaultValue,  renderedValue: defaultValue};
+       
     }
     componentDidMount() {
         let diaSemana = [ 'Domingo', 'Segunda-Feira', 'Terca-Feira', 'Quarta-Feira', 'Quinta-Feira', 'Sexta-Feira', 'Sabado' ];
@@ -25,13 +25,15 @@ export default class DatePicker extends React.Component {
             weekdaysLetter: [ 'D', 'S', 'T', 'Q', 'Q', 'S', 'S' ],
             selectMonths: true,
             selectYears: true,
-            clear: false,
             hiddenName: true,
             format: this.renderFormat,
             today: "Hoje",
             close: "Fechar",
+            clear: "Limpar",
             onStart:function(){
-                this.set( 'select', component.state.value);
+                if(component.state.value && component.state.value.isEmpty.length !== 0) {
+                    this.set( 'select', component.state.value);
+                }
             },
             onSet: function(e) {   
                 component.onChange({target: {value: new Date(e.select), renderedValue: this.get(this.renderFormat)}});

@@ -36,18 +36,19 @@ class RegisterForm extends React.Component {
         <form onSubmit={(event) => this.send(event)}>
           <Row>
             <Col s={12}>
+              <br/>
               <h5>Dados Principais</h5>
               <p>Infome seus dados principais.</p>
             </Col>
           </Row>
           
           <Row>
-              <Input s={12} label="Digite seu nome completo" onChange={(event) => this.setState({name: event.target.value})}>
+              <Input s={12} label="Digite seu nome completo" onChange={event => this.handleInput(event)}>
                 <Icon>account_circle</Icon>
               </Input>
           </Row>
           <Row>
-              <DatePicker s={12} label="Informe sua data de nascimento" name="birthdate" onChange={event => this.handleInput(event)} defaultValue={new Date()}>
+              <DatePicker s={12} label="Informe sua data de nascimento" name="birthdate" onChange={event => this.handleInput(event)} >
                 <Icon>today</Icon>
               </DatePicker>
           </Row>
@@ -59,12 +60,12 @@ class RegisterForm extends React.Component {
                         <h5>Localização</h5>
                         <br />
                     </Col>
-                    <Input s={6} name="state" type="select" label="Estado" defaultValue="0" onSelect={event => this.handleInput(event)}>
+                    <Input s={6} name="state" type="select" label="Estado" defaultValue="0" onChange={event => this.handleInput(event)}>
                         <option value="0">Escolha seu estado</option>
                         <option value="1">Rio Grande do Sul</option>
                         <option value="2">Santa Catarina</option>
                     </Input>
-                    <Input s={6} name="state" type="select" label="Cidade" defaultValue="0">
+                    <Input s={6} name="city" type="select" label="Cidade" defaultValue="0" onChange={event => this.handleInput(event)}>
                         <option value="0">Escolha sua cidade</option>
                         <option value="1">Porto Alegre</option>
                         <option value="2">Santo Ângelo</option>
@@ -82,19 +83,30 @@ class RegisterForm extends React.Component {
                       <br />
                   </Col>
                   <Input name="email" label="Digite seu email" s={12} onChange={event => this.handleInput(event)}>
-                    
+                    <Icon>email</Icon>
                   </Input>
-                  <Input type="password" name="password" label="Digite sua senha" s={6} onChange={event => this.handleInput(event)} />
-                  <Input type="password" name="confirmPassword" label="Confirme sua senha" s={6} onChange={event => this.handleInput(event)} />
+                  <Input type="password" name="password" label="Digite sua senha" s={6} onChange={event => this.handleInput(event)}>
+                    <Icon>lock</Icon>
+                  </Input>
+                  <Input type="password" name="confirmPassword" label="Confirme sua senha" s={6} onChange={event => this.handleInput(event)}>
+                    <Icon>lock_outline</Icon>
+                  </Input>
+              </Row> 
+            </Col>
+          </Row>
 
+          <Row>
+            <Col s={12}>
+                  <h5>Suas Características</h5>
+                  <p>Liste abaixo as características principais que nota que você tem</p>
+                  <br />
                   <Input s={5} name="interests" label="Digite um interesse"> 
                     <Icon>people_outline</Icon>
                   </Input>
                   <Col s={1}>
                     <a href="#" style={{verticalAlign: "middle"}}><Icon>add</Icon></a>
                   </Col>
-
-
+                 
                   <Input s={6} label="Informe uma habilidade"> 
                     <Icon>create</Icon>
                   </Input>
@@ -107,7 +119,6 @@ class RegisterForm extends React.Component {
                   </Input>
 
                   <Input type="textarea" s={12} label="Diga quais são seus anseios, suas dificuldades e o que você sonha como carreira profissional"/>
-              </Row> 
             </Col>
           </Row>
           <Row>
