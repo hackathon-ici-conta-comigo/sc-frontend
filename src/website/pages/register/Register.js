@@ -16,6 +16,8 @@ class RegisterForm extends React.Component {
   }
 
   send (event) {
+
+    console.log(this.state);
     event.preventDefault();
   }
 
@@ -45,7 +47,7 @@ class RegisterForm extends React.Component {
               </Input>
           </Row>
           <Row>
-              <DatePicker>
+              <DatePicker s={12} label="Informe sua data de nascimento" name="birthdate" onChange={event => this.handleInput(event)} defaultValue={new Date()}>
                 <Icon>today</Icon>
               </DatePicker>
           </Row>
@@ -54,7 +56,7 @@ class RegisterForm extends React.Component {
               <Col s={12}>
                   <Row>
                     <Col s={12}>
-                        <h6>Endereço</h6>
+                        <h5>Localização</h5>
                         <br />
                     </Col>
                     <Input s={6} name="state" type="select" label="Estado" defaultValue="0" onSelect={event => this.handleInput(event)}>
@@ -82,8 +84,8 @@ class RegisterForm extends React.Component {
                   <Input name="email" label="Digite seu email" s={12} onChange={event => this.handleInput(event)}>
                     
                   </Input>
-                  <Input type="password" name="password" label="Digite sua senha" s={12} onChange={event => this.handleInput(event)} />
-                  <Input type="password" name="confirmPassword" label="Confirme sua senha" s={12} onChange={event => this.handleInput(event)} />
+                  <Input type="password" name="password" label="Digite sua senha" s={6} onChange={event => this.handleInput(event)} />
+                  <Input type="password" name="confirmPassword" label="Confirme sua senha" s={6} onChange={event => this.handleInput(event)} />
 
                   <Input s={5} name="interests" label="Digite um interesse"> 
                     <Icon>people_outline</Icon>
