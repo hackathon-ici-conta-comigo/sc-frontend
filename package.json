@@ -11,11 +11,15 @@
     "react-materialize": "^0.18.4",
     "react-pure-render": "^1.0.2",
     "react-router": "^4.1.1",
-    "react-router-dom": "^4.0.0"
+    "react-router-dom": "^4.0.0",
+    "react-test-renderer": "^15.5.4"
   },
   "devDependencies": {
+    "enzyme": "^2.8.2",
     "node-sass": "^4.5.2",
     "npm-run-all": "^4.0.2",
+    "react-addons-test-utils": "^15.5.1",
+    "react-dom": "^15.5.4",
     "react-scripts": "0.9.5",
     "react-test-renderer": "^15.5.4"
   },
