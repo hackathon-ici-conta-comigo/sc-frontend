@@ -1,7 +1,7 @@
 import React from 'react';
 import './Search.css';
 import { Row, Col, Input } from 'react-materialize';
-import _ from "lodash";
+//import _ from "lodash";
 //import shouldPureComponentUpdate from 'react-pure-render/function';
 import GoogleMap from 'google-map-react';
 
@@ -28,23 +28,16 @@ class SearchForm extends React.Component {
           </Row>
           
           <Row>
-              <Col s={3}>
-                <Row><Input placeholder="Nome do paciente"/></Row>
+              <Col s={12}>
+                <Row><Input s={12} placeholder="Pesquisa por endereço, cidade ou país"/></Row>
                 <Row>
-                  <Input type="select" placeholder="Cidade" defaultValue="0">
-                    <option value="0">Cidade</option>
-                    <option value="1">Porto Alegre</option>
-                    <option value="2">Santo Ângelo</option>
-                  </Input>
+                  <div style={{height: '450px'}}>
+                    <GoogleMap
+                      center={this.defaultProps.center}
+                      zoom={this.defaultProps.zoom}>
+                    </GoogleMap>
+                  </div>
                 </Row>
-              </Col>
-              <Col s={9}>
-                <div style={{height: '300px'}}>
-                  <GoogleMap
-                    center={this.defaultProps.center}
-                    zoom={this.defaultProps.zoom}>
-                  </GoogleMap>
-                </div>
               </Col>
           </Row>
         </form>
