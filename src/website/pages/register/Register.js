@@ -2,7 +2,6 @@ import React from 'react';
 import './Register.css';
 import {Row, Col, Input, Icon, Button} from 'react-materialize';
 import DatePicker from '../../../common/datepicker/DatePicker';
-import Select from 'react-select';
 
 class RegisterForm extends React.Component {
 
@@ -73,7 +72,7 @@ class RegisterForm extends React.Component {
                   <h5>Localização</h5>
                   <br/>
                 </Col>
-
+{/*
                 <Col s={6}>
                   <Select
                     name="state"
@@ -103,7 +102,7 @@ class RegisterForm extends React.Component {
                   <option value="2">Santo Ângelo</option>
                 </Input>
 
-                {/*
+                
                     <Input s={6} name="state" type="select" label="Estado" name="state" defaultValue="0" onChange={event => this.handleInput(event)}>
                         <option value="0">Escolha seu estado</option>
                         <option value="1">Rio Grande do Sul</option>
