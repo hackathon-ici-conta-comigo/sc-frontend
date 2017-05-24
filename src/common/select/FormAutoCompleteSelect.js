@@ -4,10 +4,6 @@ import PropTypes from 'prop-types';
 import Select from 'react-select';
 
 export default class FormAutoCompleteSelect extends React.Component {
-    constructor() {
-        super();
-    }
-
     componentWillMount() {
         if (!this.props.options) {
             throw new Error("FormAutoCompleteSelect: No options provided");
