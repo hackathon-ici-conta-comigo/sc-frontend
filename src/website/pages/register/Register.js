@@ -1,6 +1,9 @@
 import React from 'react';
 import './Register.css';
 import {Row, Col, Input, Icon, Button} from 'react-materialize';
+
+import CountryDataSource from '../../../common/country/CountryDataSource';
+import FormAutoCompleteSelect from '../../../common/select/FormAutoCompleteSelect';
 import DatePicker from '../../../common/datepicker/DatePicker';
 
 class RegisterForm extends React.Component {
@@ -11,6 +14,7 @@ class RegisterForm extends React.Component {
       name: '',
       birthday: null
     }
+    this.states = new CountryDataSource().states;
   }
 
   send(event) {
@@ -18,9 +22,7 @@ class RegisterForm extends React.Component {
     event.preventDefault();
   }
 
-  componentDidMount() {
-
-  }
+  componentDidMount() {}
 
   handleInput(event) {
     let state = {};
@@ -35,7 +37,7 @@ class RegisterForm extends React.Component {
   }
 
   render() {
-     return (
+    return (
       <Row>
         <form onSubmit={(event) => this.send(event)}>
           <Row>
@@ -64,7 +66,6 @@ class RegisterForm extends React.Component {
               <Icon>today</Icon>
             </DatePicker>
           </Row>
-
           <Row>
             <Col s={12}>
               <Row>
@@ -72,44 +73,23 @@ class RegisterForm extends React.Component {
                   <h5>Localização</h5>
                   <br/>
                 </Col>
-{/*
+
                 <Col s={6}>
-                  <Select
+                  <FormAutoCompleteSelect
                     name="state"
-                    options={states}
+                    options={this.states}
+                    labelAttribute={"name"}
                     onChange={value => this.handleSelect('state', value)}
                     value={this.state.state}/>
                 </Col>
 
-
                 <Col s={6}>
-                  <Select
+                  <FormAutoCompleteSelect
                     name="city"
-                    options={cities}
+                    options={this.cities}
                     onChange={value => this.handleSelect('city', value)}
                     value={this.state.city}/>
                 </Col>
-
-                <Input
-                  s={6}
-                  name="city"
-                  type="select"
-                  label="Cidade"
-                  defaultValue="0"
-                  onChange={event => this.handleInput(event)}>
-                  <option value="0">Escolha sua cidade</option>
-                  <option value="1">Porto Alegre</option>
-                  <option value="2">Santo Ângelo</option>
-                </Input>
-
-                
-                    <Input s={6} name="state" type="select" label="Estado" name="state" defaultValue="0" onChange={event => this.handleInput(event)}>
-                        <option value="0">Escolha seu estado</option>
-                        <option value="1">Rio Grande do Sul</option>
-                        <option value="2">Santa Catarina</option>
-                    </Input>
-
-                    */}
               </Row>
             </Col>
           </Row>

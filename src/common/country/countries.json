@@ -1,4 +1,6 @@
-{
+[{
+    "name": "Brasil",
+
     "states": [{
             "prefix": "AC",
             "name": "Acre",
@@ -5722,4 +5724,4 @@
             ]
         }
     ]
-}
+}]

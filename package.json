@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "google-map-react": "^0.24.0",
+    "jsdom-global": "^3.0.2",
     "material-design-icons": "^3.0.1",
     "materialize-css": "^0.98.2",
     "react": "^15.4.2",
